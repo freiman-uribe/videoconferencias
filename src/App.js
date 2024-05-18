@@ -24,10 +24,10 @@ const App = () => {
 
         // Crear un nuevo Peer
         peerRef.current = new Peer(undefined, {
-          host: '', // Deja esto en blanco para que use el mismo host que el sitio web (Netlify)
+          host: 'https://videoconferencia-freiman.netlify.app/', // Cambia esto a tu dirección IP o dominio del servidor PeerJS
           port: 9000,
           path: '/myapp',
-          secure: true // Cambia a true si estás usando HTTPS (lo recomendado)
+          secure: false // Cambia a true si estás usando HTTPS
         });
 
         // Manejar el evento 'open' para obtener el ID del peer y almacenarlo en el estado
