@@ -27,7 +27,7 @@ const App = () => {
           host: 'videoconferencia-freiman.netlify.app', // Usa el host actual donde está alojada la aplicación (Netlify)
           port: 443,
           path: '/myapp',
-          secure: false // Utiliza HTTPS
+          secure: true // Utiliza HTTPS
         });
 
         // Manejar el evento 'open' para obtener el ID del peer y almacenarlo en el estado
