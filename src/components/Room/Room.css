@@ -1,0 +1,74 @@
+/* Room.css */
+
+.room-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .video-and-bar-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow: auto;
+  }
+  
+  .video-box {
+    position: relative;
+    margin: 5px;
+    background-color: black;
+    border: 1px solid #333;
+  }
+  
+  .user-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .fa-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .my-video {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Responsiveness */
+  .width-peer1 {
+    width: 100%;
+  }
+  
+  .width-peer2 {
+    width: 50%;
+  }
+  
+  .width-peer3, .width-peer4 {
+    width: 50%;
+  }
+  
+  .width-peer5, .width-peer6 {
+    width: 33.33%;
+  }
+  
+  .width-peer7, .width-peer8 {
+    width: 25%;
+  }
+  

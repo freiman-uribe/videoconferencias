@@ -1,0 +1,71 @@
+.bar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+  
+  .center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fa-icon {
+    width: 30px;
+    font-size: calc(16px + 1vmin);
+    
+  }
+  
+  .stop-button {
+    width: 75px;
+    height: 30px;
+    border: none;
+    font-size: 0.9375rem;
+    line-height: 30px;
+    margin-right: 15px;
+    background-color: #ff0000;
+    border-radius: 15px;
+  }
+  
+  .stop-button:hover {
+    background-color: #f25483;
+    cursor: pointer;
+  }
+  
+  .camera-button {
+    position: relative;
+    width: 75px;
+    border: none;
+    font-size: 0.9375rem;
+    padding: 5px;
+  }
+  
+  .camera-button:hover {
+    background-color: #77b7dd;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .camera-button * {
+    pointer-events: none;
+  }
+  
+  .fa-microphone-slash {
+    color: #ee2560;
+  }
+  
+  .fa-video-slash {
+    color: #ee2560;
+  }
+  
