@@ -1,4 +1,4 @@
 import io from 'socket.io-client';
-// const sockets = io('http://localhost:3001', { autoConnect: true, forceNew: true });
-const sockets = io('/');
+const sockets = io('https://social-else-freiman-e495e76c.koyeb.app/', { autoConnect: true, forceNew: true });
+// const sockets = io('/');
 export default sockets;
