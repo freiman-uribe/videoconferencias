@@ -121,7 +121,7 @@ const Room = (props) => {
     return () => {
       socket.disconnect();
     };
-  }, []);
+  }, [currentUser, goToBack, roomId]);
 
   function createPeer(userId, caller, stream) {
     const peer = new Peer({
