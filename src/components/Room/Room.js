@@ -19,6 +19,13 @@ const Room = (props) => {
   const userStream = useRef();
   const { roomId } = useParams();
 
+  const goToBack = (e) => {
+    e.preventDefault();
+    socket.emit('BE-leave-room', { roomId, leaver: currentUser });
+    sessionStorage.removeItem('user');
+    window.location.href = '/';
+  };
+  
   useEffect(() => {
     navigator.mediaDevices.enumerateDevices().then((devices) => {
       const filtered = devices.filter((device) => device.kind === 'videoinput');
@@ -189,13 +196,6 @@ const Room = (props) => {
       }
     }
   }
-
-  const goToBack = (e) => {
-    e.preventDefault();
-    socket.emit('BE-leave-room', { roomId, leaver: currentUser });
-    sessionStorage.removeItem('user');
-    window.location.href = '/';
-  };
 
   const toggleCameraAudio = (e) => {
     const target = e.target.getAttribute('data-switch');
