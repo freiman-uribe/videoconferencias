@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import Peer from 'simple-peer';
 import socket from '../../socket';
@@ -19,13 +19,13 @@ const Room = (props) => {
   const userStream = useRef();
   const { roomId } = useParams();
 
-  const goToBack = (e) => {
+  const goToBack = useCallback((e) => {
     e.preventDefault();
     socket.emit('BE-leave-room', { roomId, leaver: currentUser });
     sessionStorage.removeItem('user');
     window.location.href = '/';
-  };
-  
+  }, [currentUser, roomId]);
+
   useEffect(() => {
     navigator.mediaDevices.enumerateDevices().then((devices) => {
       const filtered = devices.filter((device) => device.kind === 'videoinput');
